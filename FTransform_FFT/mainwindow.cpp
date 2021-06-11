@@ -41,84 +41,13 @@ MainWindow::MainWindow(QWidget *parent)
 
     //getting each item of json
            for(int i = 0;i<2;i++){
-           foreach(const QJsonValue & X, array){
-             double xVal =X.toObject().value("x").toVariant().toFloat();
-             double yVal =X.toObject().value("y").toVariant().toFloat();
-             inputData.push_back({(xVal),(yVal)});     //inputing the value of X to xArray with skipping
+               foreach(const QJsonValue & X, array){
+                 double xVal =X.toObject().value("x").toVariant().toFloat();
+                 double yVal =X.toObject().value("y").toVariant().toFloat();
+                 inputData.push_back({(xVal),(yVal)});     //inputing the value of X to xArray with skipping
+               }
            }
-           }
 
-//double xVal[] = { 388,232,
-//394,262,
-//388,289,
-//402,306,
-//407,339,
-//411,386,
-//417,438,
-//423,476,
-//430,528,
-//436,564,
-//440,581,
-//451,598,
-//474,608,
-//512,610,
-//560,614,
-//623,589,
-//616,612,
-//677,602,
-//728,593,
-//770,587,
-//786,564,
-//788,537,
-//788,514,
-//782,499,
-//776,472,
-//774,449,
-//768,398,
-//768,356,
-//763,329,
-//751,300,
-//747,272,
-//740,222,
-//732,184,
-//730,163,
-//690,146,
-//654,151,
-//608,153,
-//579,157,
-//543,161,
-//516,161,
-//491,159,
-//459,161,
-//432,176,
-//413,186,
-//390,190,
-//381,193,
-//379,214,
-//379,216,
-//392,237,
-//394,256,
-//394,281,
-//394,323,
-//398,356,
-//411,392,
-//417,434,
-//417,465,
-//425,499,
-//430,518,
-//432,551,
-//411,392,
-//417,434,
-//417,465,
-//417,496,
-//417,527,
-//};
-//           int sizeXval = (sizeof(xVal) / sizeof(double));
-
-//            for (int cnt =0;cnt<sizeXval/2;cnt++){
-
-//                inputData.push_back({xVal[2*cnt]/10,xVal[2*cnt+1]/10});     //inputing the value of X to xArray with skipping
-//            }
 
              loopSize = inputData.size();
              cout<<loopSize;
